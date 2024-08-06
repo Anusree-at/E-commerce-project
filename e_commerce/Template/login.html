@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #bg{
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .box{
+            width: 320px;
+            height: 350px;
+            margin-left: 370px;
+            margin-top: 110px;
+            background-color: white;
+            text-align: center;
+            border: 2px;
+            border-style: solid;
+            border-color: violet;
+<!--            border-radius: 5%;-->
+
+        }
+        .form1 input{
+            width: 250px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .imgbox{
+
+                height: 350px;
+                margin-left: 685px;
+                margin-top: -354px;
+        }
+    </style>
+</head>
+<body id="bg" style="background-image:url('{% static 'image/img4.avif' %}');">
+    <div class="box"><br>
+    <h1>Login</h1>
+        <form action="log" method="post" class="form1">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username"><br><br>
+            <input type="text" name="password" placeholder="Password"><br><br><br>
+            <input type="submit" value="login" placeholder="login" style="background-color: #B57EDC; COLOR: WHITE; width: 110px; height: 40px; border-radius: 10%; border: none;">
+        </form><br><br>
+    <a href="reg" style="text-decoration: none;"> Don't have an account? Register</a>
+    </div>
+    <div class="imgbox">
+        <img src="{% static 'image/img3.jpg' %}" style="width: 280px; height: 354px; ">
+    </div>
+</body>
+</html>
